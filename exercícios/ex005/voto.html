@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            padding-left: 10px;
+            font: normal 1.4em Arial;
+        }
+        form{
+            margin-bottom: 10px;
+        }
+    </style>
+    <title>Voto</title>
+</head>
+<body>
+    <p>Insira sua idade para saber sua posição quanto ao voto:</p>
+    <form action="#">
+        <input type="number" name="voto" id="voto">
+        <input type="button" value="Enviar" id="env">
+    </form>
+    <div id="res"></div>
+    
+    <script>
+        var voto = window.document.getElementById('voto')
+        var but = window.document.getElementById('env')
+        var res = window.document.getElementById('res')
+        but.addEventListener('click', calc)
+
+        function calc(){
+            if(voto.value < 16){
+                res.innerHTML = 'Não vota'
+            }
+            else if(voto.value < 18 || voto.value >= 65){
+                res.innerHTML = 'Voto opicional'
+            }
+
+            else{
+                res.innerHTML = 'Voto obrigatório'
+            }
+
+            
+        }
+    </script>
+</body>
+</html>

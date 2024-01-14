@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div{
+            width: 180px;
+            text-align: center;
+        }
+    </style>
+    <title>If / else</title>
+</head>
+<body>
+    <p>Preencha o formulário abaixo</p>
+    <form action="#">
+        <label for="nota">Nota:</label>
+        <input type="number" name="nota" id="nota" required max="10" min="0">
+        <input type="button" value="Enviar" id="bot">
+    </form>
+
+    <div class="res"></div>
+
+    <script>
+        var a = window.document.getElementById('nota')
+        var b = window.document.getElementById('bot')
+        b.addEventListener('click', media)
+        var res = window.document.getElementsByClassName('res') [0]
+        
+        function media(){
+            if(a.value>7){
+                res.innerHTML = '<p>Aprovado</p>'
+                res.style.background = 'green'
+                res.innerHTML += '<p> Parabéns!! </p>'       
+                
+            }
+            else {
+                res.innerHTML = '<p>Reprovado</p>'
+                res.style.background = 'red'
+                res.innerHTML += '<p> Continue tentando! </p>'
+            }
+            
+        }
+    </script>
+</body>
+</html>

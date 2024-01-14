@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            padding: 20px;
+            font-size: 1.2em;
+        }
+
+        form{
+            margin-bottom: 20px;
+        }
+    </style>
+    <title>Somando números</title>
+
+</head>
+<body>
+    <h1>Some valores</h1>
+    <form action="#">
+        <input type="number" name="text01" id="text01">
+        +
+        <input type="number" name="text02" id="text02">
+        <input type="button" value="Somar" id="soma" onclick="Somar()">
+    </form>
+    <div id="res">Resultado</div>
+    
+    <script>     
+        var a = window.document.getElementById('text01')
+        var b = window.document.getElementById('text02')
+        var c = window.document.getElementById('soma')
+        var res = window.document.getElementById('res')
+        c.addEventListener('click', Somar)
+
+        function Somar(){
+            n1 = Number(text01.value)
+            n2 = Number(text02.value)
+            s = n1 + n2
+
+            res.innerHTML = `A soma entre os números ${n1} e ${n2} é igual a <strong>${s}</strong>`
+
+            res.style.background = 'green'
+            res.style.color = 'white'
+            res.style.width = '300px'
+        }
+        
+    </script>
+</body>
+</html>
