@@ -11,6 +11,11 @@ function calcular(){
 
     resultado = m - p
 
-    window.alert(`Você comprou um ${item} que custou ${p} reais \n Como você deu ${m} reais, o troco será de ${resultado} reais!`)
+    if(item == 0){
+        window.alert("Clique novamente e não deixe o quadro de respostas em branco")
+    }
     
+    else{
+    window.alert(`Você comprou um ${item} que custou ${p} reais \n Como você deu ${m} reais, o troco será de ${resultado} reais!`)
+    }
 }

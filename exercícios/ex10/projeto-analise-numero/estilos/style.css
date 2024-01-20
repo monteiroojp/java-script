@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    
+    height: 96vh;
+    background-color: lightblue;
+    font: normal 15pt Arial;
+}
+
+header{
+    color: white;
+}
+
+main{
+    background-color: white;
+    width: 500px;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+}
+
