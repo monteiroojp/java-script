@@ -1,18 +1,10 @@
-function exibir(num){
-    console.log(num)
+const exibir = cbSoma =>{
+    console.log(cbSoma)
 }
 
-function soma(a , b, callback){
-    let op = a + b
+const cbSoma = (callback,a,b) => {
+    soma = a + b
+    callback(soma)
+} 
 
-    callback(op)
-}
-
-function mult(a , b, callback){
-    let op = a * b
-    callback(op)
-}
-
-soma(1 , 2 , exibir)
-
-mult(2,4,exibir)
+cbSoma(exibir,1,1)
