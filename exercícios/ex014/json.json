@@ -1,0 +1,15 @@
+{
+    "img1" : "imagens/ippo.png",
+    "img2" : 23,
+    "img3" : [1,2,3,4],
+    "usuario" : {
+        "nome" : "Mathues",
+        "Idade" : 18,
+        "Habilidades" : ["HTML" , "CSS" , "Flexbox" , "CSSGrid" , "JS Básico"]
+    },
+    "img4" : 5,
+    "Esta-trabalhando" : true
+
+
+    
+}
