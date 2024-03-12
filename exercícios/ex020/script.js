@@ -30,7 +30,7 @@ const createPassword = (passwordLenght, containUpperCase, containLowerCase, cont
 }
 
 //Password Configs
-const passwordLenght = 12
+const passwordLenght = 8
 let containUpperCase = true
 let containLowerCase = true
 let containSymbols = true
@@ -109,4 +109,3 @@ generatorButton.addEventListener('click' , () =>{
     passwordResult.innerHTML = ''
     createPassword(passwordLenght, containUpperCase, containLowerCase, containSymbols, containNumbers)
 })
-
