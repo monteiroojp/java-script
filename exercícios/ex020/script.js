@@ -44,7 +44,7 @@ let upperCaseButton = document.getElementById('upperCaseButton')
 let lowerCaseButton = document.getElementById('lowerCaseButton')
 let symbolsButton = document.getElementById('symbolsButton')
 let numberButton = document.getElementById('numberButton')
-
+let inputLenght = document.getElementById('inputLenght')
 //Função das configurações
 
 let iUpperCase = 2

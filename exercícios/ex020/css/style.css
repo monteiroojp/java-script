@@ -53,3 +53,12 @@ div#configContainer button{
     border-radius: 0px;
     margin-bottom: 10px;
 }
+
+input{
+    margin-top: 10px;
+    width: 200px;
+    height: 40px;
+    font-size: 0.7em;
+    text-align: center;
+    padding-left: 3px;
+}
