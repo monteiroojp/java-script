@@ -30,7 +30,7 @@ const createPassword = (passwordLenght, containUpperCase, containLowerCase, cont
 }
 
 //Password Configs
-const passwordLenght = 8
+let passwordLenght;
 let containUpperCase = true
 let containLowerCase = true
 let containSymbols = true
@@ -55,10 +55,12 @@ upperCaseButton.addEventListener('click', () =>{
     if(iUpperCase % 2 === 0){
         containUpperCase = true;
         upperCaseButton.innerHTML = 'Letra maiúscula: Ligado';
+        upperCaseButton.style.backgroundColor = 'darkturquoise'
     } 
     else {
         containUpperCase = false;
         upperCaseButton.innerHTML = 'Letra maiúscula: Desligado';
+        upperCaseButton.style.backgroundColor = 'red'
     }
 })
 
@@ -70,9 +72,11 @@ lowerCaseButton.addEventListener('click', () =>{
     if(iLowerCase % 2 === 0){
         containLowerCase = true;
         lowerCaseButton.innerHTML = 'Letra minúscula: Ligado';
+        lowerCaseButton.style.backgroundColor = 'darkturquoise'
     } else {
         containLowerCase = false;
         lowerCaseButton.innerHTML = 'Letra minúscula: Desligado';
+        lowerCaseButton.style.backgroundColor = 'red'
     }
 })
 
@@ -84,9 +88,11 @@ symbolsButton.addEventListener('click', () =>{
     if(iSymbols % 2 === 0){
         containSymbols = true;
         symbolsButton.innerHTML = 'Símbolos: Ligado';
+        symbolsButton.style.backgroundColor = 'darkturquoise'
     } else {
         containSymbols = false;
         symbolsButton.innerHTML = 'Símbolos: Desligado';
+        symbolsButton.style.backgroundColor = 'red'
     }
 })
 
@@ -98,14 +104,26 @@ numberButton.addEventListener('click', () =>{
     if(iNumber % 2 === 0){
         containNumbers = true;
         numberButton.innerHTML = 'Números: Ligado';
+        numberButton.style.backgroundColor = 'darkturquoise'
     } else {
         containNumbers = false;
         numberButton.innerHTML = 'Números: Desligado';
+        numberButton.style.backgroundColor = 'red'
     }
 })
 
 //Chamada da senha
 generatorButton.addEventListener('click' , () =>{
     passwordResult.innerHTML = ''
-    createPassword(passwordLenght, containUpperCase, containLowerCase, containSymbols, containNumbers)
+    passwordLenght = inputLenght.value
+    if(passwordLenght == ''){
+        window.alert('Coloque no mínimo 1 caractere para senha!')
+    }   
+    else if(Number(passwordLenght) > 50 || Number(passwordLenght) < 1){
+        window.alert('Coloque um número de caractéres entre 1 a 50!')
+    } 
+    else{
+        passwordLenght = Number(inputLenght.value)
+        createPassword(passwordLenght, containUpperCase, containLowerCase, containSymbols, containNumbers)
+    }
 })
