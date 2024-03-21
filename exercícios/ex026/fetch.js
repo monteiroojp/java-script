@@ -17,7 +17,7 @@ async function fetchData(pokemonName) {
 
         else{
             const data = await response.json()
-            console.log(data)
+            console.log(data.stats)
             const pokemonImgSrc = data.sprites.front_default 
             pokemonImg.src = pokemonImgSrc
             pokemonImg.style.display = 'block'
